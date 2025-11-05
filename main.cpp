@@ -845,7 +845,7 @@ int main() {
     std::cout << " - Desamito, Hector Francis Seigmund\n";
     std::cout << " - Maristela, Kyle Gabriel\n";
     std::cout << " - San Luis, Owen Philip\n";
-    std::cout << "\nLast Updated: " << __DATE__ << " " << __TIME__ << "\n";
+    std::cout << "\nLast Updated: " << __DATE__ << \n";
     std::cout << "----------------------------------------\n";
 
     std::string line;
@@ -958,3 +958,4 @@ int main() {
 
     return 0;
 }
+
