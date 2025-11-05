@@ -839,11 +839,18 @@ bool load_config(const std::string& filename) {
 }
 
 int main() {
+    std::cout << "\n----------------------------------------\n";
     std::cout << "Welcome to CSOPESY Emulator!\n";
+    std::cout << "\nDevelopers:\n";
+    std::cout << " - Desamito, Hector Francis Seigmund\n";
+    std::cout << " - Maristela, Kyle Gabriel\n";
+    std::cout << " - San Luis, Owen Philip\n";
+    std::cout << "\nLast Updated: " << __DATE__ << " " << __TIME__ << "\n";
+    std::cout << "----------------------------------------\n";
 
     std::string line;
     while (os_running) {
-        std::cout << "root:\\> ";
+        std::cout << "\nroot:\\> ";
         if (!std::getline(std::cin, line)) {
             if (os_running) {
                 line = "exit"; // Handle Ctrl+D or EOF
