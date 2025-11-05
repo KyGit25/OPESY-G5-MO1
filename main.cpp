@@ -896,11 +896,17 @@ int main() {
             continue;
         }
 
-        // All other commands require initialization
-        if (!initialized) {
-            std::cout << "Error: You must run 'initialize' first.\n";
-            continue;
-        }
+            if (!initialized) {
+                if (command == "exit") {
+                    os_running = false;
+                    ready_queue_cv.notify_all(); // Wake any waiting threads
+                    std::cout << "Emulator terminating." << std::endl;
+                    break;
+                }
+
+                std::cout << "Error: You must run 'initialize' first." << std::endl;
+                continue;
+            }
 
         if (command == "exit") {
             os_running = false;
